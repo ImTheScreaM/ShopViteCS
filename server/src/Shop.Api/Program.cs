@@ -44,7 +44,7 @@ app.MapGet("/products", () => products);
 
 app.MapGet("/products/{id:int}",(int id) => (
 	products.FirstOrDefault(p => p.Id == id) is { } p 
-	? Results.Ok() :
+	? Results.Ok(p) :
 		Results.NotFound()
 ));
 
