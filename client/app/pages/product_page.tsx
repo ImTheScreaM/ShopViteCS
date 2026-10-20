@@ -2,6 +2,7 @@ import { NavLink } from "react-router";
 import type { IProductData } from "~/shared/types";
 
 export function ProductsPage({ data }: { data: IProductData[] }) {
+	console.log(data)
 	return (
 		<div className="flex flex-wrap justify-center gap-10 p-10">
 			{data.map((i) => (
